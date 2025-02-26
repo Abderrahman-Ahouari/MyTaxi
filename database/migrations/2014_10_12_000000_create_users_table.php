@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone');
+            $table->string('profile_photo')->nullable(true);
             $table->enum('role',['driver','passenger'])->default('driver');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
