@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('rides', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->string('start_location');
             $table->string('end_location');
             $table->date('departure_day');
